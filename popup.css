@@ -1,18 +1,53 @@
+/* Estilos personalizados para el popup */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 24px;
-  }
-  
-  #price {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: black; /* Fondo negro */
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 300px; /* Ancho del contenedor */
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#price {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilos para la tabla de enlaces */
+.links-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.links-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white; /* Bordes blancos */
+}
+
+.links-table a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent; /* Borde inicial transparente */
+  transition: border-color 0.3s, color 0.3s; /* Transición para el cambio de color del borde */
+}
+
+.links-table a:hover {
+  border-color: yellow; /* Borde amarillo al pasar el ratón por encima */
+  color: yellow; /* Cambio de color del texto */
+  transition: border-color 0.3s, color 0.3s; /* Transición para el cambio de color del borde */
+}

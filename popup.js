@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //const badgeText = xahauPrice;
         document.getElementById('price').textContent = `$${xahauPrice}`;
         chrome.runtime.sendMessage({price: `$${xahauPrice}`});
-        //chrome.runtime.sendMessage({ badgeText: `$${xahauPrice}` });
+        chrome.runtime.sendMessage({ badgeText: `$${xahauPrice}` });
         chrome.action.setBadgeText({ text: `${xahauPrice}` });
         chrome.action.setBadgeBackgroundColor({ color: [0, 0, 0, 0] }); // Color rojo: [R, G, B, A]
       })
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error fetching Xahau price:', error);
         document.getElementById('price').textContent = 'Error fetching price';
         chrome.action.setBadgeText({ text: 'Error' });
+        chrome.runtime.sendMessage({ badgeText: `Error` });
       chrome.action.setBadgeBackgroundColor({ color: [255, 0, 0, 255] }); // Color rojo: [R, G, B, A]
       });
   }
