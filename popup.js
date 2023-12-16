@@ -10,10 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
         const xahauPrice = data.xahau.usd;
         //const badgeText = xahauPrice;
+        //const formattedPrice = xahauPrice.toString().slice(0, -3);
+        const formattedPrice = `${xahauPrice.toFixed(2)}`;
         document.getElementById('price').textContent = `$${xahauPrice}`;
         chrome.runtime.sendMessage({price: `$${xahauPrice}`});
-        chrome.runtime.sendMessage({ badgeText: `$${xahauPrice}` });
-        chrome.action.setBadgeText({ text: `${xahauPrice}` });
+        //chrome.runtime.sendMessage({ badgeText: `$${xahauPrice}` });
+        //chrome.action.setBadgeText({ text: `${xahauPrice}` });
+        //chrome.runtime.sendMessage({ badgeText: `$${formattedPrice}` });
+        chrome.action.setBadgeText({ text: `${formattedPrice}` });
         chrome.action.setBadgeBackgroundColor({ color: [0, 0, 0, 0] }); // Color rojo: [R, G, B, A]
       })
       .catch(error => {
@@ -29,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
   function updatePriceEvery30Seconds() {
     fetchAndUpdatePrice(); // Actualizar el precio inmediatamente al cargar la extensión
   
-    setInterval(fetchAndUpdatePrice, 300000); // Actualizar cada 30 segundos (30000 milisegundos)
+    setInterval(fetchAndUpdatePrice, 30000); // Actualizar cada 30 segundos (30000 milisegundos)
   }
