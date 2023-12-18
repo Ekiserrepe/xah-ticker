@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
   function updatePriceEvery30Seconds() {
     fetchAndUpdatePrice(); // Actualizar el precio inmediatamente al cargar la extensión
   
-    setInterval(fetchAndUpdatePrice, 30000); // Actualizar cada 30 segundos (30000 milisegundos)
+    setInterval(fetchAndUpdatePrice, 120000); // Actualizar cada 1 minutos
   }
