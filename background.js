@@ -1,11 +1,24 @@
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.badgeText) {
-    chrome.action.setBadgeText({ text: request.badgeText });
-    chrome.action.setBadgeBackgroundColor({ color: [0, 0, 0, 0] }); // Color transparente
+chrome.runtime.onInstalled.addListener(() => {
+  function updateBadge(price) {
+    chrome.action.setBadgeText({ text: xahauPrice.toString() });
   }
 
-  if (request.price) {
-    // Puedes manejar la información del precio aquí si es necesario en el background.js
-    // Por ejemplo, puedes almacenarla en el almacenamiento local si quieres usarla después
+  function fetchXahauPrice() {
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=xahau&vs_currencies=usd')
+      .then(response => response.json())
+      .then(data => {
+         const xahauPrice = data.xahau.usd;
+         const formattedPrice = `${xahauPrice.toFixed(3)}`;
+        chrome.action.setBadgeText({ text: `${formattedPrice}` });
+      })
+      .catch(error => {
+        console.error('Error fetching Xahau price:', error);
+        updateBadge('Error');
+      });
   }
+
+  fetchXahauPrice(); 
+
+  
+  setInterval(fetchXahauPrice, 300000); 
 });

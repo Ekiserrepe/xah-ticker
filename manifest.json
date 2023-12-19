@@ -3,8 +3,6 @@
     "name": "Xahau Price Ticker",
     "version": "0.1",
     "permissions": [
-      "storage",
-      "activeTab",
       "scripting"
     ],
     "action": {
@@ -22,12 +20,6 @@
     },
     "background": {
       "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
+    }
   }
   
