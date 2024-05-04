@@ -13,7 +13,7 @@ body {
   bottom: 0;
   background-color: #0d0a22;
   color: #FFFAFA;
-  padding: 15px;
+  padding: 9px;
   width: 100%;
   text-align: left; /* Alinea el texto a la izquierda */
   font-weight: bold;
@@ -64,6 +64,10 @@ li.cabecera a:hover {
 
     color: #FFFAFA;
     
+}
+.image-dhali{
+  width: 20px;
+  height: auto;
 }
 .default-text:target {
   display: none;
