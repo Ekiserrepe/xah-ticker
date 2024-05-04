@@ -1,23 +1,91 @@
 /* Estilos personalizados para el popup */
 body {
   font-family: Arial, sans-serif;
-  background-color: black; /* Fondo negro */
+  background: rgb(0,0,0);
   color: white;
+  margin:0;
+  padding:0;
+}
+.footer {
+
+  position: relative;
+  left: 0;
+  bottom: 0;
+  background-color: #0d0a22;
+  color: #FFFAFA;
+  padding: 15px;
+  width: 100%;
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-weight: bold;
+  }
+  .footer a {
+
+    color: #FFFAFA;
+    }
+li.cabecera {
+  display: inline;
+  float: left;
+}
+ul.cabecera {
+  list-style-type: none;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fffd43;
+}
+li.cabecera a {
+  display: block;
+  color: #000000; 
+  text-align: center;
+  padding: 19px 11px;
+  text-decoration: none;
+  font-weight: bold;
+}
+li.cabecera a:hover {
+  background-color: #111;
+  color: #ffffff; 
+}
+.default-text{
+
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  font-size: 16px;
+}
+.texto {
+  display: none;
+}
+.default-text {
+  display: block;
+}
+.default-text a{
+
+
+    color: #FFFAFA;
+    
+}
+.default-text:target {
+  display: none;
+}
+.texto:target {
+  display: block;
 }
 
 .container {
-  width: 400px; /* Ancho del contenedor */
+  width: 395px;
+  /* Ancho del contenedor */
   margin: 0 auto;
 }
 
 h1 {
   text-align: center;
 }
+
 h2 {
   text-align: center;
 }
+
 #price {
   text-align: center;
   font-size: 24px;
@@ -34,7 +102,8 @@ h2 {
 .links-table td {
   padding: 10px;
   text-align: center;
-  border: 1px solid black; /* Bordes blancos */
+  border: 1px solid black;
+  /* Bordes blancos */
 }
 
 .links-table a {
@@ -44,12 +113,17 @@ h2 {
   text-align: center;
   color: white;
   text-decoration: none;
-  border: 2px solid transparent; /* Borde inicial transparente */
-  transition: border-color 0.3s, color 0.3s; /* Transición para el cambio de color del borde */
+  border: 2px solid transparent;
+  /* Borde inicial transparente */
+  transition: border-color 0.3s, color 0.3s;
+  /* Transición para el cambio de color del borde */
 }
 
 .links-table a:hover {
-  border-color: yellow; /* Borde amarillo al pasar el ratón por encima */
-  color: yellow; /* Cambio de color del texto */
-  transition: border-color 0.3s, color 0.3s; /* Transición para el cambio de color del borde */
+  border-color: yellow;
+  /* Borde amarillo al pasar el ratón por encima */
+  color: yellow;
+  /* Cambio de color del texto */
+  transition: border-color 0.3s, color 0.3s;
+  /* Transición para el cambio de color del borde */
 }

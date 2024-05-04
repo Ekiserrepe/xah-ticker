@@ -1,9 +1,11 @@
 {
     "manifest_version": 3,
     "name": "Xahau Price Ticker",
+    "description": "This extension displays the current Xahau price.",
     "version": "0.1",
     "permissions": [
-      "scripting"
+      "storage",
+      "idle"
     ],
     "action": {
       "default_popup": "popup.html",
