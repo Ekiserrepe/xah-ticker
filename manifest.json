@@ -1,11 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "Xahau Price Ticker",
+    "name": "Ekiserrepe's Xahau Price Ticker",
     "description": "This extension displays the current Xahau price.",
     "version": "0.1",
     "permissions": [
       "storage",
-      "idle"
+      "idle",
+      "activeTab"
     ],
     "action": {
       "default_popup": "popup.html",
