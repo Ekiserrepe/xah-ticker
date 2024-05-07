@@ -4,7 +4,6 @@
     "description": "This extension displays the current Xahau price.",
     "version": "0.1",
     "permissions": [
-      "storage",
       "idle",
       "activeTab"
     ],
