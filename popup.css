@@ -42,6 +42,7 @@ display: inline-block;
 li.cabecera {
   display: inline;
   float: left;
+  font-size: 10.5px;
 }
 ul.cabecera {
   list-style-type: none;

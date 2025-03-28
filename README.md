@@ -1,4 +1,4 @@
-# Xahau Price Ticker v.0.1
+# Xahau Price Ticker v.0.2
 
 ## Description
 
