@@ -40,28 +40,48 @@ body {
 display: inline-block;
 }
 li.cabecera {
-  display: inline;
-  float: left;
+  display: inline-block;
   font-size: 10.5px;
+  flex: 1; /* Hacer que cada elemento ocupe la misma proporción */
+  height: 100%; /* Ocupar toda la altura del contenedor padre */
 }
+/* Definir una altura fija para el contenedor de la barra de navegación */
 ul.cabecera {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #fffd43;
+  display: flex;
+  width: 100%;
+  height: 48px; /* Reducir la altura para que coincida con la imagen */
+}
+li.cabecera:first-child {
+  flex: 0.5;
+}
+li.cabecera img {
+  display: block;
+  height: 48px; /* Asegurar que la imagen ocupe toda la altura */
+  width: auto; /* Mantener la proporción */
+  padding: 0; /* Quitar cualquier padding */
 }
 li.cabecera a {
   display: block;
   color: #080042; 
   text-align: center;
-  padding: 19px 11px;
+  padding: 14px 5px; /* Reducir el padding vertical de 19px a 14px */
   text-decoration: none;
   font-weight: bold;
+  white-space: nowrap;
+  height: 100%;
+  box-sizing: border-box;
 }
 li.cabecera a:hover {
   background-color: #000000;
-  color: #ffffff; 
+  color: #ffffff;
+  /* Asegurar que el hover cubra completamente el área */
+  margin-bottom: -1px; /* Compensar posible hueco en el borde inferior */
+  border-bottom: 1px solid #000000; /* Añadir borde negro en la parte inferior */
 }
 .default-text{
 
